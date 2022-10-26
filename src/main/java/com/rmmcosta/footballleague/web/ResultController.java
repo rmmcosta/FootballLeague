@@ -29,6 +29,6 @@ public class ResultController {
     @PostMapping
     public ResponseEntity<Result> saveResult(@RequestBody Result result) {
         System.out.println(result);
-        return new ResponseEntity<>(resultService.saveResult(result), HttpStatus.OK);
+        return new ResponseEntity<>(resultService.saveResult(result), HttpStatus.CREATED);
     }
 }

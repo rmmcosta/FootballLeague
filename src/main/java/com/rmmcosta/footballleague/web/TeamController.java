@@ -28,6 +28,6 @@ public class TeamController {
     @PostMapping
     public ResponseEntity<Team> saveTeam(@RequestBody Team team) {
         System.out.println(team);
-        return new ResponseEntity<>(teamService.saveTeam(team), HttpStatus.OK);
+        return new ResponseEntity<>(teamService.saveTeam(team), HttpStatus.CREATED);
     }
 }

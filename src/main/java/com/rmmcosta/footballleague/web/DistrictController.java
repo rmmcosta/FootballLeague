@@ -29,6 +29,6 @@ public class DistrictController {
     @PostMapping
     public ResponseEntity<District> saveDistrict(@RequestBody District district) {
         System.out.println(district);
-        return new ResponseEntity<>(districtService.saveDistrict(district), HttpStatus.OK);
+        return new ResponseEntity<>(districtService.saveDistrict(district), HttpStatus.CREATED);
     }
 }
